@@ -732,7 +732,7 @@ export async function POST(req: Request) {
     //send email to user
     await transport.sendMail({
       from: `"hare" <solutions@hamjambo.com>`, // user address
-      to: email, // user receiver
+      to: email.trim(), // user receiver
       subject: "hare Report", // Subject line
       html: userMail,
     });
